@@ -24,16 +24,16 @@ const Shop = () => {
       {/* second section */}
       <div className="w-full flex flex-col md:flex-row">
         {/* left section */}
-        <div className="w-full md:w-[40%] flex justify-center pt-7">
+        <div className="w-full md:w-[50%] flex justify-center pt-7">
           <LeftSidebar />
         </div>
 
         {/* right section */}
-        <div className="w-full md:w-[60%] flex flex-wrap justify-center gap-4 p-4">
+        <div className="w-full md:w-[80%] flex flex-wrap justify-center gap-4 p-4">
           {cards.map((item, index) => (
             <div
               key={index}
-              className="w-[48%] sm:w-[45%] md:w-[45%] lg:w-[30%] bg-white border border-gray-200 rounded-lg shadow p-4"
+              className="w-[100%] sm:w-[50%] md:w-[45%] lg:w-[30%] bg-white border border-gray-200 rounded-lg shadow p-4"
             >
               {/* Product Image */}
               <img
