@@ -24,13 +24,48 @@ const Header2 = () => {
 
         {/* Desktop Nav */}
         <nav className="hidden lg:flex items-center gap-8 text-lg font-medium">
-          <Link to="/" className="text-red-900 hover:text-green-600 hover:underline">Home</Link>
-          <Link to="/BestSeller" className="text-red-900 hover:text-green-600 hover:underline">Best Seller</Link>
-          <Link to="/about" className="text-red-900 hover:text-green-600 hover:underline">About</Link>
-          <Link to="/shope" className="text-red-900 hover:text-green-600 hover:underline">Shope</Link>
-          <Link to="/contact" className="text-red-900 hover:text-green-600 hover:underline">Contact</Link>
-          <Link to="/blog" className="text-red-900 hover:text-green-600 hover:underline">Blog</Link>
-          <Link to="/ingredient" className="text-red-900 hover:text-green-600 hover:underline">Ingredients</Link>
+          <Link
+            to="/"
+            className="text-red-900 hover:text-green-600 hover:underline"
+          >
+            Home
+          </Link>
+          <Link
+            to="/BestSeller"
+            className="text-red-900 hover:text-green-600 hover:underline"
+          >
+            Best Seller
+          </Link>
+          <Link
+            to="/about"
+            className="text-red-900 hover:text-green-600 hover:underline"
+          >
+            About
+          </Link>
+          <Link
+            to="/shop"
+            className="text-red-900 hover:text-green-600 hover:underline"
+          >
+            Shop
+          </Link>
+          <Link
+            to="/contact"
+            className="text-red-900 hover:text-green-600 hover:underline"
+          >
+            Contact
+          </Link>
+          <Link
+            to="/blog"
+            className="text-red-900 hover:text-green-600 hover:underline"
+          >
+            Blog
+          </Link>
+          <Link
+            to="/ingredient"
+            className="text-red-900 hover:text-green-600 hover:underline"
+          >
+            Ingredients
+          </Link>
 
           {/* Cart & Login */}
           <div className="flex items-center gap-6 ml-6">
@@ -49,13 +84,27 @@ const Header2 = () => {
       {/* Mobile Menu (Dropdown or Slide-in) */}
       {menuOpen && (
         <div className="lg:hidden flex flex-col items-center gap-6 bg-white p-6 shadow-md text-lg font-semibold text-red-900 animate-slideDown">
-          <Link onClick={() => setMenuOpen(false)} to="/">Home</Link>
-          <Link onClick={() => setMenuOpen(false)} to="/BestSeller">Best Seller</Link>
-          <Link onClick={() => setMenuOpen(false)} to="/about">About</Link>
-          <Link onClick={() => setMenuOpen(false)} to="/shop">Shop</Link>
-          <Link onClick={() => setMenuOpen(false)} to="/contact">Contact</Link>
-          <Link onClick={() => setMenuOpen(false)} to="/blog">Blog</Link>
-          <Link onClick={() => setMenuOpen(false)} to="/ingredient">Ingredients</Link>
+          <Link onClick={() => setMenuOpen(false)} to="/">
+            Home
+          </Link>
+          <Link onClick={() => setMenuOpen(false)} to="/BestSeller">
+            Best Seller
+          </Link>
+          <Link onClick={() => setMenuOpen(false)} to="/about">
+            About
+          </Link>
+          <Link onClick={() => setMenuOpen(false)} to="/shop">
+            Shop
+          </Link>
+          <Link onClick={() => setMenuOpen(false)} to="/contact">
+            Contact
+          </Link>
+          <Link onClick={() => setMenuOpen(false)} to="/blog">
+            Blog
+          </Link>
+          <Link onClick={() => setMenuOpen(false)} to="/ingredient">
+            Ingredients
+          </Link>
 
           {/* Cart & Login in mobile too */}
           <div className="flex items-center gap-2 hover:text-green-700">
@@ -64,7 +113,9 @@ const Header2 = () => {
           </div>
           <div className="flex items-center gap-2 hover:text-green-700">
             <FaUserAlt className="text-xl" />
-            <Link to="/login">Login</Link>
+            <Link onClick={() => setMenuOpen(false)} to="/login">
+              Login
+            </Link>
           </div>
         </div>
       )}
