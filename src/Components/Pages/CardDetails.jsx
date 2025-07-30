@@ -1,38 +1,36 @@
 import { useState } from "react";
 import { FaStar, FaTruck } from "react-icons/fa";
-import first from "../../assets/products/5th.jpg";
+import first from "../../assets/products/1st.jpg";
 import second from "../../assets/products/2nd.jpg";
 import third from "../../assets/products/3rd.jpg";
 import forth from "../../assets/products/4th.webp";
 import NATURAL_PILES_CARE_HERBS from "../../assets/products/NATURAL_PILES_CARE_HERBS.webp";
 
-import mainImage from "../../assets/products/1st.jpg";
-// import mainImage from "../../assets/products/5th.jpg"
-
-// Placeholder images (replace with real paths)
-// const mainImage = "https://via.placeholder.com/300x400";
 const thumbnails = [first, second, third, forth, NATURAL_PILES_CARE_HERBS];
 
 const ProductPage = () => {
   const [selectedSize, setSelectedSize] = useState("8 fl oz");
   const [quantity, setQuantity] = useState(1);
   const [deliveryOption, setDeliveryOption] = useState("one-time");
+  const [mainImage, setMainImage] = useState(thumbnails[0]);
 
   const sizes = ["8 fl oz", "Travel | 2 fl oz", "Single Use", "24 fl oz"];
 
   return (
     <div className="flex flex-col lg:flex-row p-4 sm:p-6 gap-10 max-w-7xl mx-auto">
-      {/* Left Section: Images */}
-      {/* Left Section: Images */}
-      <div className="flex flex-col sm:flex-row lg:flex-row gap-4 w-full lg:w-1/2 items-start">
+      {/* Left Section */}
+      <div className="flex flex-col lg:flex-row gap-4 w-full lg:w-1/2">
         {/* Thumbnails */}
-        <div className="flex flex-row lg:flex-col gap-2 overflow-x-auto lg:overflow-visible">
+        <div className="flex lg:flex-col flex-row gap-2 overflow-x-auto lg:overflow-visible max-h-[400px]">
           {thumbnails.map((src, i) => (
             <img
               key={i}
               src={src}
               alt={`Thumbnail ${i + 1}`}
-              className="w-14 h-14 object-cover border rounded shrink-0"
+              onClick={() => setMainImage(src)}
+              className={`w-14 h-14 object-cover border rounded cursor-pointer shrink-0 ${
+                mainImage === src ? "ring-2 ring-green-500" : ""
+              }`}
             />
           ))}
         </div>
@@ -47,7 +45,7 @@ const ProductPage = () => {
         </div>
       </div>
 
-      {/* Right Section: Product Info */}
+      {/* Right Section */}
       <div className="w-full lg:w-1/2">
         {/* Ratings */}
         <div className="flex items-center gap-1 text-yellow-500 mb-2">
