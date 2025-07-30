@@ -7,6 +7,7 @@ import Shop from "./Components/Pages/Shop"
 import Header from "./Components/Sections/Header"
 import Footer from "./Components/Sections/Footer"
 import Header2 from "./Components/Sections/Header2"
+import ProductPage from "./Components/Pages/CardDetails"
 
 function App() {
   return (
@@ -18,6 +19,8 @@ function App() {
       <Route path="/shop" element={<Shop/>}/>
       <Route path="/login" element={<Login/>}/>
       <Route path="/register" element={<Register/>}/>
+      <Route path="/ingredient" element={<ProductPage/>}/>
+
       <Route path="/forgotPassword" element={<Forgot_Password/>}/>
     </Routes>
     <Footer/>
