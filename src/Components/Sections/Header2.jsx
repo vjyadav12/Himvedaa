@@ -64,7 +64,7 @@ const Header2 = () => {
           </div>
           <div className="flex items-center gap-2 hover:text-green-700">
             <FaUserAlt className="text-xl" />
-            <a href="/login">Login</a>
+            <Link to="/login">Login</Link>
           </div>
         </div>
       )}
