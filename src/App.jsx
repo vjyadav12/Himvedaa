@@ -6,11 +6,13 @@ import Home from "./Components/Pages/Home"
 import About from "./Components/Pages/About"
 import Header from "./Components/Sections/Header"
 import Footer from "./Components/Sections/Footer"
+import Header2 from "./Components/Sections/Header2"
 
 function App() {
   return (
     <>
-    <Header/>
+    {/* <Header/> */}
+    <Header2/>
     <Routes>
       <Route path="/" element={<Home/>}/>
       <Route path="/about" element={<About/>}/>
