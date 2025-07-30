@@ -23,8 +23,11 @@ import { FaCheckCircle } from "react-icons/fa";
 import { RiCustomerServiceFill } from "react-icons/ri";
 import { FaFileArrowUp } from "react-icons/fa6";
 import Footer from "../Sections/Footer";
+import { useState } from "react";
 
 const Home = () => {
+  const FirstSectionCards = [1,2,3]
+  const [firstSectionCards,setFirstSectionCards] = useState()
   return (
     <>
       {/* <Header /> */}
@@ -59,7 +62,7 @@ const Home = () => {
       </div>
 
       {/* Second div new launch  */}
-      <div class="flex flex-wrap justify-center items-start gap-6 p-6 bg-white">
+      <div class="flex flex-wrap justify-center items-start gap-6 p-[40px] bg-white">
         {/* <!-- Left Section --> */}
         <div class="w-full md:w-[200px] text-center">
           <h2 class="text-lg font-bold text-red-900">New Launch</h2>
@@ -73,7 +76,8 @@ const Home = () => {
         </div>
 
         {/* <!-- Product Card 1 --> */}
-        <div class="w-[250px] border rounded shadow hover:shadow-lg relative">
+        {FirstSectionCards.map((cards)=>(
+          <div class="w-[315px] border rounded shadow hover:shadow-lg relative">
           <span class="absolute top-2 left-2 bg-green-700 text-white text-xs px-2 py-1 rounded">
             Save ₹100.00
           </span>
@@ -93,61 +97,18 @@ const Home = () => {
             </button>
           </div>
         </div>
-
-        {/* <!-- Product Card 2 --> */}
-        <div class="w-[250px] border rounded shadow hover:shadow-lg relative">
-          <span class="absolute top-2 left-2 bg-green-700 text-white text-xs px-2 py-1 rounded">
-            Save ₹100.00
-          </span>
-          <div class="p-4 flex flex-col items-center text-center">
-            <img src={protct} alt="product" class="h-32 mb-2 object-contain" />
-            <h3 class="font-medium text-sm">Rice Water for Hair and Skin</h3>
-            <p class="text-xs text-gray-600 mt-1 mb-2">
-              The power of grain for your hair health gain.
-            </p>
-            <div class="flex items-center justify-center gap-2 text-sm mb-3">
-              <span class="line-through text-gray-400">₹499.00</span>
-              <span class="font-semibold text-black">₹399.00</span>
-              <span class="text-green-700 text-xs font-bold">20% OFF</span>
-            </div>
-            <button class="bg-red-900 text-white w-full py-1 cursor-pointer rounded hover:bg-red-950 text-sm">
-              Add To Cart
-            </button>
-          </div>
-        </div>
-
-        {/* <!-- Product Card 3 (with crop for demonstration) --> */}
-        <div class="w-[250px] border rounded shadow hover:shadow-lg relative">
-          <span class="absolute top-2 left-2 bg-green-700 text-white text-xs px-2 py-1 rounded">
-            Save ₹100.00
-          </span>
-          <div class="p-4 flex flex-col items-center text-center">
-            <img src={protct} alt="product" class="h-32 mb-2 object-contain" />
-            <h3 class="font-medium text-sm">Rice Water for Hair and Skin</h3>
-            <p class="text-xs text-gray-600 mt-1 mb-2">
-              The power of grain for your hair health gain.
-            </p>
-            <div class="flex items-center justify-center gap-2 text-sm mb-3">
-              <span class="line-through text-gray-400">₹499.00</span>
-              <span class="font-semibold text-black">₹399.00</span>
-              <span class="text-green-700 text-xs font-bold">20% OFF</span>
-            </div>
-            <button class="bg-red-900 text-white w-full py-1 cursor-pointer rounded hover:bg-red-950 text-sm">
-              Add To Cart
-            </button>
-          </div>
-        </div>
+        ))}
       </div>
 
       {/* second Section Deal of the END */}
-      <div className="flex flex-col lg:flex-row justify-center items-center w-full bg-blue-200">
+      <div className="flex flex-col lg:flex-row justify-center items-center w-full p-[40px] bg-blue-200">
         {/* left section */}
-        <div className="flex justify-center items-center w-full lg:w-1/2 p-8">
+        <div className="flex justify-center items-center w-full lg:w-1/2 ">
           <img className="w-full max-w-md" src={praice} alt="image" />
         </div>
 
         {/* right section */}
-        <div className="flex justify-center items-center w-full px-4 py-10">
+        <div className="flex justify-center items-center w-full px-4 ">
           <div className="flex flex-col justify-center items-center bg-amber-50 p-8 md:p-20 rounded-lg shadow-md max-w-2xl w-full">
             {/* Title */}
             <h4 className="text-lg font-medium text-gray-600 mb-2">
@@ -194,7 +155,7 @@ const Home = () => {
       </div>
 
       {/* third section */}
-      <div className="py-10 px-4 sm:px-6 md:px-10 lg:px-20 xl:px-[180px]">
+      <div className="py-10 px-[40px] sm:px-6 p-[40px] md:px-10 lg:px-20 xl:px-[180px]">
         <h2 className="text-center font-bold mb-10 text-3xl text-[#7b342d]">
           Our Product
         </h2>
