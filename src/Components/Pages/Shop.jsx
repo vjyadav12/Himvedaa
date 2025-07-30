@@ -2,7 +2,7 @@ import our_banner from "../../assets/images/our-banner.png";
 import our1 from "../../assets/images/our1.png";
 import LeftSidebar from "../Sections/LeftSidebar";
 
-const About = () => {
+const Shop = () => {
   const cards = [1, 2, 3, 4, 5, 6];
   return (
     <>
@@ -18,23 +18,22 @@ const About = () => {
         }}
       >
         <h1 className="font-bold text-3xl">Shop</h1>
-        <h1 className="">Home/Shope</h1>
+        <h1 className="">Home/Shop</h1>
       </div>
 
       {/* second section */}
-      <div className="w-full flex">
+      <div className="w-full flex flex-col md:flex-row">
         {/* left section */}
-        <div className="flex flex-col md:flex-row w-[40%] justify-center pt-7">
+        <div className="w-full md:w-[40%] flex justify-center pt-7">
           <LeftSidebar />
-          {/* Your right-side product cards go here */}
         </div>
 
-        {/* right section  */}
-        <div className="w-full md:w-[60%] flex flex-wrap justify-center gap-6 p-4">
+        {/* right section */}
+        <div className="w-full md:w-[60%] flex flex-wrap justify-center gap-4 p-4">
           {cards.map((item, index) => (
             <div
               key={index}
-              className="w-full sm:w-[80%] md:w-[45%] lg:w-[40%] xl:w-[30%] bg-white border border-gray-200 rounded-lg shadow p-4"
+              className="w-[48%] sm:w-[45%] md:w-[45%] lg:w-[30%] bg-white border border-gray-200 rounded-lg shadow p-4"
             >
               {/* Product Image */}
               <img
@@ -95,4 +94,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default Shop;

@@ -52,7 +52,7 @@ const Header2 = () => {
           <Link onClick={() => setMenuOpen(false)} to="/">Home</Link>
           <Link onClick={() => setMenuOpen(false)} to="/BestSeller">Best Seller</Link>
           <Link onClick={() => setMenuOpen(false)} to="/about">About</Link>
-          <Link onClick={() => setMenuOpen(false)} to="/shope">Shope</Link>
+          <Link onClick={() => setMenuOpen(false)} to="/shop">Shope</Link>
           <Link onClick={() => setMenuOpen(false)} to="/contact">Contact</Link>
           <Link onClick={() => setMenuOpen(false)} to="/blog">Blog</Link>
           <Link onClick={() => setMenuOpen(false)} to="/ingredient">Ingredients</Link>

@@ -3,7 +3,7 @@ import Login from "./Components/Pages/Login"
 import Register from "./Components/Pages/Register"
 import Forgot_Password from "./Components/Pages/Forgot_Password"
 import Home from "./Components/Pages/Home"
-import About from "./Components/Pages/About"
+import Shop from "./Components/Pages/Shop"
 import Header from "./Components/Sections/Header"
 import Footer from "./Components/Sections/Footer"
 import Header2 from "./Components/Sections/Header2"
@@ -15,7 +15,7 @@ function App() {
     <Header2/>
     <Routes>
       <Route path="/" element={<Home/>}/>
-      <Route path="/about" element={<About/>}/>
+      <Route path="/shop" element={<Shop/>}/>
       <Route path="/login" element={<Login/>}/>
       <Route path="/register" element={<Register/>}/>
       <Route path="/forgotPassword" element={<Forgot_Password/>}/>
