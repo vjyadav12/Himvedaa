@@ -40,7 +40,7 @@ const Header2 = () => {
             </div>
             <div className="flex items-center gap-2 cursor-pointer hover:text-green-700">
               <FaUserAlt className="text-2xl" />
-              <span>Login</span>
+              <a href="/login">Login</a>
             </div>
           </div>
         </nav>
@@ -64,7 +64,7 @@ const Header2 = () => {
           </div>
           <div className="flex items-center gap-2 hover:text-green-700">
             <FaUserAlt className="text-xl" />
-            <Link to="/login"><span>Login</span></Link>
+            <a href="/login">Login</a>
           </div>
         </div>
       )}
