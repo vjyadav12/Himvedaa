@@ -540,27 +540,27 @@ const Home = () => {
 
       {/* 13th section Join The Tea Club */}
       <div className="flex flex-col lg:flex-row justify-evenly items-center gap-6 py-[40px] px-4">
-  {/* Left Section */}
-  <div className="flex flex-col justify-center items-center text-center lg:text-left">
-    <h2 className="text-2xl text-red-700 font-bold">Join The Tea Club</h2>
-    <p className="font-semibold text-gray-600 max-w-md">
-      You will receive a FREE STAMP and 10% discount for your next purchase
-    </p>
-  </div>
+        {/* Left Section */}
+        <div className="flex flex-col justify-center items-center text-center lg:text-left">
+          <h2 className="text-2xl text-red-700 font-bold">Join The Tea Club</h2>
+          <p className="font-semibold text-gray-600 max-w-md">
+            You will receive a FREE STAMP and 10% discount for your next
+            purchase
+          </p>
+        </div>
 
-  {/* Right Section */}
-  <div className="flex flex-col sm:flex-row justify-center items-center gap-2">
-    <input
-      type="text"
-      placeholder="Your email address"
-      className="p-2 border border-gray-400 w-full sm:w-auto"
-    />
-    <button className="p-2 bg-green-600 text-white hover:bg-green-800 border-gray-400 border">
-      Subscribe
-    </button>
-  </div>
-</div>
-
+        {/* Right Section */}
+        <div className="flex flex-col sm:flex-row justify-center items-center gap-2">
+          <input
+            type="text"
+            placeholder="Your email address"
+            className="p-2 border border-gray-400 w-full sm:w-auto"
+          />
+          <button className="p-2 bg-green-600 text-white hover:bg-green-800 border-gray-400 border">
+            Subscribe
+          </button>
+        </div>
+      </div>
     </>
   );
 };
