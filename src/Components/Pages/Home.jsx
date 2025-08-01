@@ -115,8 +115,8 @@ const Home = () => {
         </div>
 
         {/* right section */}
-        <div className="flex justify-center items-center w-full px-4 border border-green-600  ">
-          <div className="flex flex-col items-center border border-amber-600 gap-7 bg-amber-50 p-8 md:p-10 rounded-lg shadow-md max-w-2xl w-full">
+        <div className="flex justify-center items-center w-full px-4   ">
+          <div className="flex flex-col items-center gap-7 bg-amber-50 p-8 md:p-10 rounded-lg shadow-md max-w-2xl w-full">
             {/* Title */}
             <h4 className="text-lg font-medium text-gray-600 mb-2">
               Nature & Organic Shampoo
@@ -475,7 +475,7 @@ const Home = () => {
           className="cursor-pointer flex flex-col justify-center items-center gap-2 box-border 
       shadow-2xl hover:shadow-green-700 border border-transparent 
       hover:border-gray-500 bg-gradient-to-br from-white to-green-100 
-      rounded-2xl p-6 transition duration-300 transform hover:scale-105"
+      rounded-2xl p-20 transition duration-300 transform "
         >
           <FaShoppingCart className="text-4xl text-green-700" />
           <p className="text-lg font-semibold text-gray-700">Free Shipping</p>
