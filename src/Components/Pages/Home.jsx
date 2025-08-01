@@ -108,58 +108,61 @@ const Home = () => {
       </div>
 
       {/* second Section Deal of the END */}
-      <div className="flex flex-col lg:flex-row justify-center items-center w-full h-[90vh] p-[40px] bg-blue-200">
-        {/* left section */}
-        <div className="flex justify-center items-center w-full lg:w-1/2 ">
-          <img className="w-full max-w-md" src={praice} alt="image" />
+      <div className="flex flex-col lg:flex-row justify-center items-center w-full min-h-screen p-6 sm:p-10 md:p-16 bg-blue-200">
+        {/* Left section */}
+        <div className="w-full lg:w-1/2 flex justify-center items-center mb-8 lg:mb-0">
+          <img
+            className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg"
+            src={praice}
+            alt="image"
+          />
         </div>
 
-        {/* right section */}
-        <div className="flex justify-center items-center w-full px-4   ">
-          <div className="flex flex-col items-center gap-7 bg-amber-50 p-8 md:p-10 rounded-lg shadow-md max-w-2xl w-full">
-            {/* Title */}
-            <h4 className="text-lg font-medium text-gray-600 mb-2">
+        {/* Right section */}
+        <div className="w-full lg:w-1/2 flex justify-center items-center">
+          <div className="w-full max-w-2xl bg-amber-50 rounded-lg shadow-md p-6 sm:p-8 md:p-10 flex flex-col items-center gap-6">
+            {/* Titles */}
+            <h4 className="text-base sm:text-lg font-medium text-gray-600 text-center">
               Nature & Organic Shampoo
             </h4>
             <h1
-              className="text-3xl md:text-4xl font-bold mb-4"
+              className="text-2xl sm:text-3xl md:text-4xl font-bold text-center"
               style={{ color: "#7b342d", fontFamily: "Open Sans" }}
             >
               DEALS OF THE DAY
             </h1>
 
             {/* Price */}
-            <div className="flex justify-center items-center gap-4 mb-4">
+            <div className="flex justify-center items-center gap-4">
               <span className="line-through text-gray-500 text-lg">$99.99</span>
-              <span className="text-3xl font-semibold text-green-600">
+              <span className="text-2xl sm:text-3xl font-semibold text-green-600">
                 $95.99
               </span>
             </div>
 
-            <div>
-              {/* Description */}
-              <p className="text-gray-700 text-center mb-1">
-                Fresh Organic Shampoo
-              </p>
-              <p className="text-gray-600 text-center mb-6 px-4">
+            {/* Description */}
+            <div className="text-center px-2 sm:px-4">
+              <p className="text-gray-700 mb-1">Fresh Organic Shampoo</p>
+              <p className="text-gray-600">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                 Reprehenderit placeat a doloremque?
               </p>
             </div>
 
             {/* Countdown */}
-            <div className="flex gap-4 justify-center items-center">
+            <div className="flex gap-4 flex-wrap justify-center items-center">
               {["Days", "Hours", "Minutes", "Seconds"].map((label, index) => (
-                <div
-                  key={index}
-                  className="flex flex-col justify-center items-center px-2"
-                >
-                  <span className="font-bold text-2xl text-gray-800">30</span>
+                <div key={index} className="flex flex-col items-center px-2">
+                  <span className="font-bold text-xl sm:text-2xl text-gray-800">
+                    30
+                  </span>
                   <p className="text-sm text-gray-600">{label}</p>
                 </div>
               ))}
             </div>
-            <button className="pl-4 pr-4 pt-2 pb-2 cursor-pointer font-semibold text-white bg-green-600 hover:bg-green-700 hover:font-bold rounded-sm">
+
+            {/* Button */}
+            <button className="px-6 py-2 bg-green-600 text-white rounded-md font-semibold hover:bg-green-700 hover:scale-105 transition">
               Shop Now
             </button>
           </div>
