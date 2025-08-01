@@ -108,19 +108,19 @@ const Home = () => {
       </div>
 
       {/* second Section Deal of the END */}
-      <div className="flex flex-col lg:flex-row justify-center items-center w-full min-h-screen p-6 sm:p-10 md:p-16 bg-blue-200">
+      <div className="flex flex-col lg:flex-row border-4 justify-center items-center w-full  p-6 sm:p-10 md:p-20 md:pt-30 md:pb-30 bg-blue-200">
         {/* Left section */}
-        <div className="w-full lg:w-1/2 flex justify-center items-center mb-8 lg:mb-0">
+        <div className="w-full lg:w-1/2 flex justify-center items-center mb-8 lg:mb-0 ">
           <img
-            className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg"
+            className="w-full h-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg"
             src={praice}
             alt="image"
           />
         </div>
 
         {/* Right section */}
-        <div className="w-full lg:w-1/2 flex justify-center items-center">
-          <div className="w-full max-w-2xl bg-amber-50 rounded-lg shadow-md p-6 sm:p-8 md:p-10 flex flex-col items-center gap-6">
+        <div className="w-full rounded-lg  bg-white p-4 lg:w-1/2 flex justify-center items-center ">
+          <div className="w-full  max-w-2xl bg-amber-50 border-4 border-pink-200  rounded-lg shadow-md p-6 sm:p-8 md:p-15 flex flex-col items-center gap-6">
             {/* Titles */}
             <h4 className="text-base sm:text-lg font-medium text-gray-600 text-center">
               Nature & Organic Shampoo
@@ -152,7 +152,7 @@ const Home = () => {
             {/* Countdown */}
             <div className="flex gap-4 flex-wrap justify-center items-center">
               {["Days", "Hours", "Minutes", "Seconds"].map((label, index) => (
-                <div key={index} className="flex flex-col items-center px-2">
+                <div key={index} className="border border-gray-400 flex flex-col items-center px-8 py-5 shadow-xl hover:shadow-2xl rounded-md">
                   <span className="font-bold text-xl sm:text-2xl text-gray-800">
                     30
                   </span>
