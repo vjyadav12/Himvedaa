@@ -1,4 +1,4 @@
-import Header from "../Sections/Header";
+// import Header from "../Sections/Header";
 import banner1 from "../../assets/images/banner1.png";
 import praice from "../../assets/images/praice.png";
 import protct from "../../assets/images/protct.png";
@@ -10,6 +10,9 @@ import late2 from "../../assets/images/late2.png";
 import late3 from "../../assets/images/late3.png";
 import late4 from "../../assets/images/late4.png";
 import about1 from "../../assets/images/about1.png";
+import about2 from "../../assets/images/about2.png";
+import ft1_bg_1 from "../../assets/images/ft1_bg 1.png";
+
 import about3 from "../../assets/images/about3.png";
 // import finallogo from "../../assets/final logo.png.png";
 // import logo from "../../assets/final logo.png";
@@ -22,12 +25,12 @@ import { MdSecurity } from "react-icons/md";
 import { FaCheckCircle } from "react-icons/fa";
 import { RiCustomerServiceFill } from "react-icons/ri";
 import { FaFileArrowUp } from "react-icons/fa6";
-import Footer from "../Sections/Footer";
+// import Footer from "../Sections/Footer";
 import { useState } from "react";
 
 const Home = () => {
-  const FirstSectionCards = [1,2,3]
-  const [firstSectionCards,setFirstSectionCards] = useState()
+  const FirstSectionCards = [1, 2, 3];
+  const [firstSectionCards, setFirstSectionCards] = useState();
   return (
     <>
       {/* <Header /> */}
@@ -64,59 +67,63 @@ const Home = () => {
       {/* Second div new launch  */}
       <div class="flex flex-wrap justify-center items-start gap-6 p-[40px] bg-white">
         {/* <!-- Left Section --> */}
-        <div class="w-full md:w-[200px] text-center">
+        <div class="w-full md:w-[200px] text-center flex flex-col justify-center items-center">
           <h2 class="text-lg font-bold text-red-900">New Launch</h2>
           <p class="text-sm mt-2 mb-4 text-gray-700">
             Explore our latest launch, a carefully made collection of herbal
             treasures designed as per requests made by you to Nanaji.
           </p>
-          <button class="bg-green-700 cursor-pointer text-white px-4 py-1 rounded hover:bg-green-800 text-sm">
+          <button class="bg-green-700 cursor-pointer text-white px-6 py-[6px] rounded hover:bg-green-800 text-sm">
             View all
           </button>
         </div>
 
         {/* <!-- Product Card 1 --> */}
-        {FirstSectionCards.map((cards)=>(
+        {FirstSectionCards.map((cards) => (
           <div class="w-[315px] border rounded shadow hover:shadow-lg relative">
-          <span class="absolute top-2 left-2 bg-green-700 text-white text-xs px-2 py-1 rounded">
-            Save ₹100.00
-          </span>
-          <div class="p-4 flex flex-col items-center text-center">
-            <img src={protct} alt="product" class="h-32 mb-2 object-contain" />
-            <h3 class="font-medium text-sm">Rice Water for Hair and Skin</h3>
-            <p class="text-xs text-gray-600 mt-1 mb-2">
-              The power of grain for your hair health gain.
-            </p>
-            <div class="flex items-center justify-center gap-2 text-sm mb-3">
-              <span class="line-through text-gray-400">₹499.00</span>
-              <span class="font-semibold text-black">₹399.00</span>
-              <span class="text-green-700 text-xs font-bold">20% OFF</span>
+            <span class="absolute top-2 left-2 bg-green-700 text-white text-xs px-2 py-1 rounded">
+              Save ₹100.00
+            </span>
+            <div class="p-4 flex flex-col items-center text-center">
+              <img
+                src={protct}
+                alt="product"
+                class="h-70 mb-2 object-contain"
+              />
+              <h3 class="font-medium text-sm">Rice Water for Hair and Skin</h3>
+              <p class="text-xs text-gray-600 mt-1 mb-2">
+                The power of grain for your hair health gain.
+              </p>
+              <div class="flex items-center justify-center gap-2 text-sm mb-3">
+                <span class="line-through text-gray-400">₹499.00</span>
+                <span class="font-semibold text-black">₹399.00</span>
+                <span class="text-green-700 text-xs font-bold">20% OFF</span>
+              </div>
+              <button class="bg-red-900 text-white w-full py-1 cursor-pointer rounded hover:bg-red-950 text-sm">
+                Add To Cart
+              </button>
             </div>
-            <button class="bg-red-900 text-white w-full py-1 cursor-pointer rounded hover:bg-red-950 text-sm">
-              Add To Cart
-            </button>
           </div>
-        </div>
         ))}
       </div>
 
       {/* second Section Deal of the END */}
-      <div className="flex flex-col lg:flex-row justify-center items-center w-full p-[40px] bg-blue-200">
+      <div className="flex flex-col lg:flex-row justify-center items-center w-full h-[90vh] p-[40px] bg-blue-200">
         {/* left section */}
         <div className="flex justify-center items-center w-full lg:w-1/2 ">
           <img className="w-full max-w-md" src={praice} alt="image" />
         </div>
 
         {/* right section */}
-        <div className="flex justify-center items-center w-full px-4 ">
-          <div className="flex flex-col justify-center items-center bg-amber-50 p-8 md:p-20 rounded-lg shadow-md max-w-2xl w-full">
+        <div className="flex justify-center items-center w-full px-4 border border-green-600  ">
+          <div className="flex flex-col items-center border border-amber-600 gap-7 bg-amber-50 p-8 md:p-10 rounded-lg shadow-md max-w-2xl w-full">
             {/* Title */}
             <h4 className="text-lg font-medium text-gray-600 mb-2">
               Nature & Organic Shampoo
             </h4>
             <h1
               className="text-3xl md:text-4xl font-bold mb-4"
-              style={{ color: "#7b342d" }}
+              style={{ color: "#7b342d", fontFamily: "Open Sans" }}
             >
               DEALS OF THE DAY
             </h1>
@@ -129,14 +136,16 @@ const Home = () => {
               </span>
             </div>
 
-            {/* Description */}
-            <p className="text-gray-700 text-center mb-1">
-              Lorem ipsum dolor sit amet?
-            </p>
-            <p className="text-gray-600 text-center mb-6 px-4">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Reprehenderit placeat a doloremque?
-            </p>
+            <div>
+              {/* Description */}
+              <p className="text-gray-700 text-center mb-1">
+                Fresh Organic Shampoo
+              </p>
+              <p className="text-gray-600 text-center mb-6 px-4">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Reprehenderit placeat a doloremque?
+              </p>
+            </div>
 
             {/* Countdown */}
             <div className="flex gap-4 justify-center items-center">
@@ -150,31 +159,30 @@ const Home = () => {
                 </div>
               ))}
             </div>
+            <button className="pl-4 pr-4 pt-2 pb-2 cursor-pointer font-semibold text-white bg-green-600 hover:bg-green-700 hover:font-bold rounded-sm">
+              Shop Now
+            </button>
           </div>
         </div>
       </div>
 
       {/* third section */}
-      <div className="py-10 px-[40px] sm:px-6 p-[40px] md:px-10 lg:px-20 xl:px-[180px]">
+      <div className="w-full px-4 sm:px-6 md:px-10 lg:px-10 py-10 ">
         <h2 className="text-center font-bold mb-10 text-3xl text-[#7b342d]">
           Our Product
         </h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6">
+        <div className="w-full flex flex-wrap justify-center gap-6">
           {[1, 2, 3, 4].map((_, i) => (
             <div
               key={i}
-              className="border rounded-lg shadow-sm overflow-hidden flex flex-col items-center relative bg-white"
+              className="border border-gray-300 rounded-lg shadow-sm overflow-hidden flex flex-col items-center relative p-[14px]"
             >
               <span className="absolute top-2 left-2 bg-green-600 text-white text-xs px-2 py-1 rounded">
                 Save ₹100.00
               </span>
 
-              <img
-                src={protct}
-                alt="Product"
-                className="w-24 sm:w-28 md:w-32 mt-6 sm:mt-8"
-              />
+              <img src={protct} alt="Product" className="w-60 " />
 
               <div className="p-4 text-center">
                 <h3 className="text-sm font-semibold text-gray-800">
@@ -201,30 +209,34 @@ const Home = () => {
             </div>
           ))}
         </div>
-
-        <div className="flex justify-center mt-10">
-          <button className="bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded">
-            View all
-          </button>
-        </div>
       </div>
 
       {/* fifth section Two images  */}
       <div className="flex flex-col lg:flex-row justify-center items-center px-4 sm:px-10 lg:px-[180px] py-10 gap-6 w-full">
-        <div className="w-full lg:w-1/2">
+        <div className="relative w-full max-w-md">
           <img
             src={imgProdct1}
-            alt="img"
+            alt="Product"
             className="w-full h-auto object-cover"
           />
+          <h1 className="absolute top-4 left-4 text-5xl font-bold z-10 text-green-600">
+            50% Sale <br />
+            <span className="text-red-950 text-2xl">winter Vacation</span>
+          </h1>
+          <br />
         </div>
 
-        <div className="w-full lg:w-1/2">
+        <div className="relative w-full max-w-md">
           <img
             src={imgProdct2}
-            alt="img"
+            alt="Product"
             className="w-full h-auto object-cover"
           />
+          <h1 className="absolute top-4 left-4 text-5xl font-bold z-10 text-green-600">
+            -25% Sale <br />
+            <span className="text-red-950 text-2xl">Summer Vacation </span>
+          </h1>
+          <br />
         </div>
       </div>
 
@@ -240,8 +252,11 @@ const Home = () => {
           </div>
 
           {/* Right: Text Content */}
-          <div className="w-full md:w-1/2 text-center md:text-left">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-[#4a2511] mb-4">
+          <div className="w-full md:w-1/2 text-center md:text-left pt-[80px] pb-[80px]">
+            <h2
+              className="text-2xl sm:text-3xl md:text-4xl font-semibold text-[#4a2511] mb-4"
+              style={{ fontFamily: "Open Sans" }}
+            >
               High-Quality Teas & Botanicals
             </h2>
             <p className="text-sm sm:text-base text-[#5c5c5c] mb-6 px-2 md:px-0">
@@ -257,7 +272,10 @@ const Home = () => {
 
       {/* seventh section Latest News & Recipes */}
       <div className="py-16 px-4 md:px-8 bg-white text-center">
-        <h2 className="text-2xl md:text-3xl font-semibold text-[#4a2511] mb-10">
+        <h2
+          className="text-2xl md:text-3xl font-bold text-[#7b342d] mb-10"
+          style={{ fontFamily: "Open Sans" }}
+        >
           Latest News & Recipes
         </h2>
 
@@ -326,7 +344,10 @@ const Home = () => {
 
         {/* Center Content */}
         <div className="flex flex-col w-full md:w-[40%] justify-center items-center gap-6">
-          <h1 className="font-bold text-3xl md:text-4xl text-[#7b342d] text-center">
+          <h1
+            className="font-bold text-3xl md:text-4xl text-[#7b342d] text-center "
+            style={{ fontFamily: "Open Sans" }}
+          >
             The Ultimate Tea Experience
           </h1>
 
@@ -340,34 +361,37 @@ const Home = () => {
             nihil? Facilis, obcaecati.
           </p>
 
-          <button className="p-2 rounded-xl bg-green-500 text-white hover:bg-green-700">
+          <button className="pl-4 pr-4 pt-2 pb-2 rounded-sm bg-green-500 text-white hover:bg-green-700">
             Learn More
           </button>
         </div>
 
         {/* Right Image Column - Hidden on small screens */}
         <div className="hidden md:flex flex-col w-[30%] justify-center items-center">
-          <img src={about3} alt="" />
+          <img src={about2} alt="" />
           <img src={about1} alt="" />
         </div>
       </div>
 
       {/* ninth section Want To Stay Healthy Drint Matcha Best Flavour Of Out Tea */}
-      <div className="flex flex-col md:flex-row py-[60px] px-4 md:px-[100px] w-full items-center justify-center gap-10">
+      <div
+        className="flex flex-col md:flex-row py-[60px] px-4 md:px-[100px] w-full items-center justify-center gap-10"
+        style={{ backgroundImage: `url(${ft1_bg_1})` }}
+      >
         {/* Left section */}
         <div className="flex flex-col gap-6 w-full md:w-1/2 text-center md:text-left">
           <h1
             className="font-bold text-3xl md:text-4xl"
-            style={{ color: "#7b342d" }}
+            style={{ color: "#7b342d", fontFamily: "Open Sans" }}
           >
             Want To Stay Healthy Drink Matcha – Best Flavour Of Our Tea
           </h1>
-          <p>
+          <p style={{ fontFamily: "Open Sans" }}>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
             deleniti similique facilis officiis quaerat modi quibusdam,
             consequuntur doloribus voluptatum.
           </p>
-          <button className="p-2 rounded-xl bg-green-500 text-white hover:bg-green-700 w-fit mx-auto md:mx-0">
+          <button className="pl-4 pr-4 pt-2 pb-2 rounded-sm bg-green-500 text-white hover:bg-green-700 w-fit mx-auto md:mx-0">
             Learn More
           </button>
         </div>
@@ -400,10 +424,13 @@ const Home = () => {
 
         {/* Right section - Text */}
         <div className="flex flex-col gap-6 w-full md:w-1/2 text-center md:text-left">
-          <h1 className="font-bold text-3xl md:text-4xl text-red-700">
+          <h1
+            className="font-bold text-3xl md:text-4xl "
+            style={{ color: "#7b342d", fontFamily: "Open Sans" }}
+          >
             Tea Is One Of the Most Popular Drinks In the World
           </h1>
-          <p>
+          <p style={{ fontFamily: "Open Sans" }}>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
             deleniti similique facilis officiis quaerat modi quibusdam,
             consequuntur doloribus voluptatum.
@@ -442,7 +469,7 @@ const Home = () => {
       </div>
 
       {/* twelfth section icons*/}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 p-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 p-6 pt-[60px] pb-[60px]">
         {/* Card 1 */}
         <div
           className="cursor-pointer flex flex-col justify-center items-center gap-2 box-border 
@@ -500,7 +527,7 @@ const Home = () => {
       </div>
 
       {/* 13th section Join The Tea Club */}
-      <div className="flex flex-col lg:flex-row justify-evenly items-center gap-6 py-[40px] px-4">
+      <div className="flex flex-col lg:flex-row justify-evenly items-center gap-6 py-[80px] px-4 ">
         {/* Left Section */}
         <div className="flex flex-col justify-center items-center text-center lg:text-left">
           <h2 className="text-2xl text-red-700 font-bold">Join The Tea Club</h2>
