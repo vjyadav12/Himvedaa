@@ -108,9 +108,9 @@ const Home = () => {
       </div>
 
       {/* second Section Deal of the END */}
-      <div className="flex flex-col lg:flex-row border-4 justify-center items-center w-full  p-6 sm:p-10 md:p-20 md:pt-30 md:pb-30 bg-blue-200">
+      <div className="flex flex-col lg:flex-row justify-center items-center w-full  p-6 sm:p-10 md:p-20 md:pt-30 md:pb-30 bg-blue-200">
         {/* Left section */}
-        <div className="w-full lg:w-1/2 flex justify-center items-center mb-8 lg:mb-0 ">
+        <div className="w-full lg:w-[40%] flex justify-center items-center mb-8 lg:mb-0 ">
           <img
             className="w-full h-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg"
             src={praice}
@@ -119,8 +119,8 @@ const Home = () => {
         </div>
 
         {/* Right section */}
-        <div className="w-full rounded-lg  bg-white p-4 lg:w-1/2 flex justify-center items-center ">
-          <div className="w-full  max-w-2xl bg-amber-50 border-4 border-pink-200  rounded-lg shadow-md p-6 sm:p-8 md:p-15 flex flex-col items-center gap-6">
+        <div className="w-[60%]   bg-white p-2 lg:w-1/2 flex justify-center items-center ">
+          <div className="w-full  max-w-2xl bg-amber-50 border-4 border-pink-200  shadow-md p-6 sm:p-8 md:p-15 flex flex-col items-center gap-6">
             {/* Titles */}
             <h4 className="text-base sm:text-lg font-medium text-gray-600 text-center">
               Nature & Organic Shampoo
