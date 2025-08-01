@@ -37,10 +37,10 @@ const Home = () => {
 
       {/* first Section */}
       <div
-        className="h-[80vh] md:h-[60vh] bg-cover bg-center text-white flex justify-center items-center"
+        className="h-[80vh] md:h-[90vh] bg-cover bg-center text-white flex justify-center items-center"
         style={{ backgroundImage: `url(${banner1})` }}
       >
-        <div className="flex flex-col justify-center items-center gap-6 border border-white/30 px-6 md:px-[120px] py-[80px] backdrop-blur-sm bg-white/10 rounded-lg text-center">
+        <div className="flex flex-col justify-center items-center gap-6 border border-white/30 px-6 md:px-[160px] py-[60px] backdrop-blur-xs bg-white/10 rounded-bl-[120px] rounded-tr-[120px] text-center">
           {/* Headings */}
           <h1 className="text-4xl md:text-5xl font-bold font-serif leading-snug">
             Ecocert Certified <br />

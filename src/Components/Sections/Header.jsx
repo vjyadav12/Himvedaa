@@ -14,7 +14,7 @@ const Header = () => {
         </div>
 
         {/* Search Bar + Links */}
-        <div className="flex flex-col justify-center items-center gap-4 w-full max-w-[700px] px-4">
+        <div className="flex  flex-col justify-center items-center gap-4 w-full max-w-[700px] px-4">
           {/* Search Bar */}
           <div className="w-full">
             <input

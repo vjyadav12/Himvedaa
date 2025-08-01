@@ -12,8 +12,8 @@ import ProductPage from "./Components/Pages/CardDetails"
 function App() {
   return (
     <>
-    {/* <Header/> */}
-    <Header2/>
+    <Header/>
+    {/* <Header2/> */}
     <Routes>
       <Route path="/" element={<Home/>}/>
       <Route path="/shop" element={<Shop/>}/>
