@@ -8,6 +8,7 @@ import Header from "./Components/Sections/Header"
 import Footer from "./Components/Sections/Footer"
 import Header2 from "./Components/Sections/Header2"
 import ProductPage from "./Components/Pages/CardDetails"
+import Footer2 from "./Components/Sections/Footer2"
 
 function App() {
   return (
@@ -23,7 +24,8 @@ function App() {
 
       <Route path="/forgotPassword" element={<Forgot_Password/>}/>
     </Routes>
-    <Footer/>
+    {/* <Footer/> */}
+    <Footer2/>
     </>
   )
 }

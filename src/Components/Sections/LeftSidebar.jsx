@@ -8,12 +8,12 @@ const LeftSidebar = () => {
   };
 
   const categories = [
-    { label: "Accessories", items: ["Belts", "Bags", "Hats"] },
-    { label: "Fruits", items: ["Apple", "Banana", "Orange"] },
-    { label: "Juice", items: ["Mango", "Guava", "Pineapple"] },
-    { label: "Meats", items: ["Chicken", "Beef", "Fish"] },
-    { label: "Vegetables", items: ["Carrot", "Tomato", "Spinach"] },
-    { label: "Discount", items: ["10% Off", "20% Off", "50% Off"] },
+    { label: "Foundation ", items: ["GlowRoot Base", "FlawlessHerb", "MatteMrit"]},
+    { label: "Face", items: ["Sundarya Glow", "Kumkumadi Radiance", "AyuLeaf Cream"] },
+    { label: "Body", items: ["AyuBody Bliss", "Turmerich", "ChandanSilk"] },
+    { label: "Hair Care", items: ["Keshamrit", "BhringaRoot", "Fish"] },
+    { label: "Herbal Products", items: ["TulsiTouch", "HaldiHeal", "AmlaRoot Therapy"] },
+    { label: "Our Combos", items: ["10% Off", "20% Off", "50% Off","Sundarya means beauty for glowing, clear skin","Sharira means body; soothing and nourishing"] },
   ];
 
   return (

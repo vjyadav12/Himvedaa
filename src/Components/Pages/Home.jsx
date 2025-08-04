@@ -124,7 +124,7 @@ const Home = () => {
       </div>
 
       {/* second Section Deal of the END */}
-      <div className="flex flex-col lg:flex-row justify-center items-center w-full  p-6 sm:p-10 md:p-20 md:pt-30 md:pb-30 bg-blue-200">
+      <div className="flex flex-col lg:flex-row justify-center items-center w-full  p-6 sm:p-10 md:p-20  bg-blue-200">
         {/* Left section */}
         <div className="w-full lg:w-[40%] flex justify-center items-center mb-8 lg:mb-0 ">
           <img
@@ -234,29 +234,29 @@ const Home = () => {
       </div>
 
       {/* fifth section Two images  */}
-      <div className="flex flex-col lg:flex-row justify-center bg-center bg-cover items-center px-4 sm:px-10 lg:px-[180px] py-10 gap-6 w-full">
-        <div className="relative w-full max-w-md">
+      <div className="flex flex-col lg:flex-row justify-center bg-center bg-cover items-center px-4 sm:px-10 lg:px-[100px] py-10 gap-6 w-full">
+        <div className="relative w-full">
           <img
             src={imgProdct1}
             alt="Product"
             className="w-full h-auto object-cover"
           />
-          <h1 className="absolute top-4 left-4 text-4xl font-bold z-10 text-green-600">
+          <h1 className="absolute top-4 left-4 text-5xl font-bold z-10 text-green-600"  style={{ fontFamily: "Open Sans" }}>
             50% Sale <br />
-            <span className="text-red-950 text-xl">winter Vacation</span>
+            <span className="text-red-950 text-2xl"  style={{ fontFamily: "Open Sans" }}>winter Vacation</span>
           </h1>
           <br />
         </div>
 
-        <div className="relative w-full max-w-md">
+        <div className="relative w-full ">
           <img
             src={imgProdct2}
             alt="Product"
             className="w-full h-auto object-cover"
           />
-          <h1 className="absolute top-4 left-4 text-4xl font-bold z-10 text-green-600">
+          <h1 className="absolute top-4 left-4 text-5xl font-bold z-10 text-green-600">
             -25% Sale <br />
-            <span className="text-red-950 text-xl">Summer Vacation </span>
+            <span className="text-red-950 text-2xl">Summer Vacation </span>
           </h1>
           <br />
         </div>
