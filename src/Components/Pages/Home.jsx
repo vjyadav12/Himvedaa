@@ -12,6 +12,7 @@ import late4 from "../../assets/images/late4.png";
 import about1 from "../../assets/images/about1.png";
 import about2 from "../../assets/images/about2.png";
 import ft1_bg_1 from "../../assets/images/ft1_bg 1.png";
+import FooterIMG from "../../assets/images/FooterIMG.jpg";
 
 import about3 from "../../assets/images/about3.png";
 // import finallogo from "../../assets/final logo.png.png";
@@ -241,9 +242,17 @@ const Home = () => {
             alt="Product"
             className="w-full h-auto object-cover"
           />
-          <h1 className="absolute top-4 left-4 text-5xl font-bold z-10 text-green-600"  style={{ fontFamily: "Open Sans" }}>
+          <h1
+            className="absolute top-4 left-4 text-5xl font-bold z-10 text-green-600"
+            style={{ fontFamily: "Open Sans" }}
+          >
             50% Sale <br />
-            <span className="text-red-950 text-2xl"  style={{ fontFamily: "Open Sans" }}>winter Vacation</span>
+            <span
+              className="text-red-950 text-2xl"
+              style={{ fontFamily: "Open Sans" }}
+            >
+              winter Vacation
+            </span>
           </h1>
           <br />
         </div>
@@ -608,18 +617,18 @@ const Home = () => {
       {/* end Map section */}
 
       {/* 13th section Join The Tea Club */}
-      <div className="flex flex-col lg:flex-row justify-evenly items-center gap-6 py-[80px] px-4 ">
-        {/* Left Section */}
-        <div className="flex flex-col justify-center items-center text-center lg:text-left">
+      {/* <div className="flex flex-col lg:flex-row justify-evenly items-center gap-6 py-[80px] px-4 border"> */}
+      {/* Left Section */}
+      {/* <div className="flex flex-col justify-center items-center text-center lg:text-left">
           <h2 className="text-2xl text-red-700 font-bold">Join The Tea Club</h2>
           <p className="font-semibold text-gray-600 max-w-md">
             You will receive a FREE STAMP and 10% discount for your next
             purchase
           </p>
-        </div>
+        </div> */}
 
-        {/* Right Section */}
-        <div className="flex flex-col sm:flex-row justify-center items-center gap-2">
+      {/* Right Section */}
+      {/* <div className="flex flex-col sm:flex-row justify-center items-center gap-2">
           <input
             type="text"
             placeholder="Your email address"
@@ -628,6 +637,29 @@ const Home = () => {
           <button className="p-2 bg-green-600 text-white hover:bg-green-800 border-gray-400 border">
             Subscribe
           </button>
+        </div> */}
+      {/* </div> */}
+
+      <div
+        className="relative flex justify-center items-center h-[400px] text-center font-bold text-xl text-white border-none"
+        style={{ fontFamily: "Open Sans" }}
+      >
+        {/* Background Image */}
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: `url(${FooterIMG})` }}
+        ></div>
+
+        {/* Black gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-transparent"></div>
+
+        {/* Text content */}
+        <div className="relative px-6 md:px-[100px] lg:px-[200px] z-10">
+          <h2>
+            “Your well-being is not defined by speed or success, but by aligning
+            your body, mind, and spirit with nature’s wisdom and embracing the
+            balance that Ayurveda offers in life.”
+          </h2>
         </div>
       </div>
     </>

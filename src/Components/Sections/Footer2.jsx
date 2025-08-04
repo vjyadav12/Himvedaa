@@ -4,7 +4,7 @@ import { FaXTwitter } from "react-icons/fa6";
 
 const Footer2 = () => {
   return (
-    <footer className="bg-[#f9f9f9] text-gray-700 border-t">
+    <footer className="border-t text-white bg-black border-none">
       <div className="max-w-7xl mx-auto px-6 md:px-10 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
 
@@ -25,7 +25,7 @@ const Footer2 = () => {
                 <a
                   key={idx}
                   href="#"
-                  className="p-2 rounded-full bg-white  hover:bg-black hover:text-white transition-all duration-300 shadow-sm"
+                  className="p-2 rounded-full bg-black  hover:bg-white hover:text-black transition-all duration-300 shadow-sm"
                 >
                   <Icon size={18} />
                 </a>
@@ -36,7 +36,7 @@ const Footer2 = () => {
           {/* Footer navigation */}
           <div className="md:col-span-3 grid grid-cols-2 sm:grid-cols-3 gap-6 text-sm">
             <div>
-              <h4 className="font-semibold text-gray-900 mb-3">Product</h4>
+              <h4 className="font-semibold  mb-3 text-white text-xl ">Product</h4>
               <ul className="space-y-2">
                 {["Foundation", "Face", "Body", "hair Care","Herbal Products","Our Combos"].map((item) => (
                   <li key={item}>
@@ -51,7 +51,7 @@ const Footer2 = () => {
               </ul>
             </div>
             <div>
-              <h4 className="font-semibold text-gray-900 mb-3">Resources</h4>
+              <h4 className="font-semibold mb-3 text-xl text-white">Resources</h4>
               <ul className="space-y-2">
                 {["Documentation", "Tutorials", "Blog", "Support"].map((item) => (
                   <li key={item}>
@@ -66,7 +66,7 @@ const Footer2 = () => {
               </ul>
             </div>
             <div>
-              <h4 className="font-semibold text-gray-900 mb-3">Company</h4>
+              <h4 className="font-semibold mb-3 text-xl text-white">Company</h4>
               <ul className="space-y-2">
                 {["About", "Careers", "Contact", "Partners"].map((item) => (
                   <li key={item}>
