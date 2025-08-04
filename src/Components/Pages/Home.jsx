@@ -135,7 +135,7 @@ const Home = () => {
         </div>
 
         {/* Right section */}
-        <div className="w-[60%] bg-white p-2 sm:w-full lg:w-1/2 flex justify-center items-center ">
+        <div className="w-full bg-white p-2 sm:w-full lg:w-1/2 flex justify-center items-center ">
           <div className="w-full  max-w-2xl bg-amber-50 border-4 border-pink-200  shadow-md p-6 sm:p-8 md:p-15 flex flex-col items-center gap-6">
             {/* Titles */}
             <h4 className="text-base sm:text-lg font-medium text-gray-600 text-center">
@@ -234,16 +234,16 @@ const Home = () => {
       </div>
 
       {/* fifth section Two images  */}
-      <div className="flex flex-col lg:flex-row justify-center items-center px-4 sm:px-10 lg:px-[180px] py-10 gap-6 w-full">
+      <div className="flex flex-col lg:flex-row justify-center bg-center bg-cover items-center px-4 sm:px-10 lg:px-[180px] py-10 gap-6 w-full">
         <div className="relative w-full max-w-md">
           <img
             src={imgProdct1}
             alt="Product"
             className="w-full h-auto object-cover"
           />
-          <h1 className="absolute top-4 left-4 text-5xl font-bold z-10 text-green-600">
+          <h1 className="absolute top-4 left-4 text-4xl font-bold z-10 text-green-600">
             50% Sale <br />
-            <span className="text-red-950 text-2xl">winter Vacation</span>
+            <span className="text-red-950 text-xl">winter Vacation</span>
           </h1>
           <br />
         </div>
@@ -254,9 +254,9 @@ const Home = () => {
             alt="Product"
             className="w-full h-auto object-cover"
           />
-          <h1 className="absolute top-4 left-4 text-5xl font-bold z-10 text-green-600">
+          <h1 className="absolute top-4 left-4 text-4xl font-bold z-10 text-green-600">
             -25% Sale <br />
-            <span className="text-red-950 text-2xl">Summer Vacation </span>
+            <span className="text-red-950 text-xl">Summer Vacation </span>
           </h1>
           <br />
         </div>
@@ -547,6 +547,23 @@ const Home = () => {
           <p>Customer Services</p>
         </div>
       </div>
+
+      {/* Map section */}
+      {/* <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13518.853007815713!2d76.2629000320481!3d32.104034709840576!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391b4f902117bb1f%3A0xf28a1e3b1ff9e8f9!2sKangra%20Bus%20Stand!5e0!3m2!1sen!2sin!4v1727256970607!5m2!1sen!2sin" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> */}
+      <div className="p-[60px]" style={{backgroundColor:"#E6E4E1"}}>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13518.853007815713!2d76.2629000320481!3d32.104034709840576!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391b4f902117bb1f%3A0xf28a1e3b1ff9e8f9!2sKangra%20Bus%20Stand!5e0!3m2!1sen!2sin!4v1727256970607!5m2!1sen!2sin"
+          width="100%"
+          height="400"
+          style={{ border: 0 }}
+          allowFullScreen=""
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+          title="Google Maps"
+        ></iframe>
+      </div>
+
+      {/* end Map section */}
 
       {/* 13th section Join The Tea Club */}
       <div className="flex flex-col lg:flex-row justify-evenly items-center gap-6 py-[80px] px-4 ">
