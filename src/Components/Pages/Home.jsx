@@ -65,7 +65,7 @@ const Home = () => {
       </div>
 
       {/* Second div new launch  */}
-      <div class="flex flex-wrap justify-center items-start gap-6 p-[40px] bg-white">
+      <div class="flex flex-wrap justify-center items-center gap-6 p-[30px] bg-white">
         {/* <!-- Left Section --> */}
         <div class="w-full md:w-[200px] text-center flex flex-col justify-center items-center">
           <h2 class="text-lg font-bold text-red-900">New Launch</h2>
@@ -79,32 +79,48 @@ const Home = () => {
         </div>
 
         {/* <!-- Product Card 1 --> */}
-        {FirstSectionCards.map((cards) => (
-          <div class="w-[315px] border rounded shadow hover:shadow-lg relative">
-            <span class="absolute top-2 left-2 bg-green-700 text-white text-xs px-2 py-1 rounded">
-              Save ₹100.00
-            </span>
-            <div class="p-4 flex flex-col items-center text-center">
-              <img
-                src={protct}
-                alt="product"
-                class="h-70 mb-2 object-contain"
-              />
-              <h3 class="font-medium text-sm">Rice Water for Hair and Skin</h3>
-              <p class="text-xs text-gray-600 mt-1 mb-2">
-                The power of grain for your hair health gain.
-              </p>
-              <div class="flex items-center justify-center gap-2 text-sm mb-3">
-                <span class="line-through text-gray-400">₹499.00</span>
-                <span class="font-semibold text-black">₹399.00</span>
-                <span class="text-green-700 text-xs font-bold">20% OFF</span>
+        <div className="overflow-hidden w-[70%] bg-white py-10">
+          <div
+            className="flex w-max animate-slide gap-4"
+            style={{
+              animation: "scrollX 20s linear infinite",
+            }}
+          >
+            {FirstSectionCards.concat(FirstSectionCards).map((cards, index) => (
+              <div
+                key={index}
+                className="w-[315px] border border-gray-400 rounded shadow hover:shadow-lg relative flex-shrink-0"
+              >
+                <span className="absolute top-2 left-2 bg-green-700 text-white text-xs px-2 py-1 rounded">
+                  Save ₹100.00
+                </span>
+                <div className="p-4 flex flex-col items-center text-center">
+                  <img
+                    src={protct}
+                    alt="product"
+                    className="h-70 mb-2 object-contain"
+                  />
+                  <h3 className="font-medium text-sm">
+                    Rice Water for Hair and Skin
+                  </h3>
+                  <p className="text-xs text-gray-600 mt-1 mb-2">
+                    The power of grain for your hair health gain.
+                  </p>
+                  <div className="flex items-center justify-center gap-2 text-sm mb-3">
+                    <span className="line-through text-gray-400">₹499.00</span>
+                    <span className="font-semibold text-black">₹399.00</span>
+                    <span className="text-green-700 text-xs font-bold">
+                      20% OFF
+                    </span>
+                  </div>
+                  <button className="bg-red-900 text-white w-full py-1 cursor-pointer rounded hover:bg-red-950 text-sm">
+                    Add To Cart
+                  </button>
+                </div>
               </div>
-              <button class="bg-red-900 text-white w-full py-1 cursor-pointer rounded hover:bg-red-950 text-sm">
-                Add To Cart
-              </button>
-            </div>
+            ))}
           </div>
-        ))}
+        </div>
       </div>
 
       {/* second Section Deal of the END */}
@@ -119,7 +135,7 @@ const Home = () => {
         </div>
 
         {/* Right section */}
-        <div className="w-[60%]   bg-white p-2 lg:w-1/2 flex justify-center items-center ">
+        <div className="w-[60%] bg-white p-2 sm:w-full lg:w-1/2 flex justify-center items-center ">
           <div className="w-full  max-w-2xl bg-amber-50 border-4 border-pink-200  shadow-md p-6 sm:p-8 md:p-15 flex flex-col items-center gap-6">
             {/* Titles */}
             <h4 className="text-base sm:text-lg font-medium text-gray-600 text-center">
@@ -152,7 +168,10 @@ const Home = () => {
             {/* Countdown */}
             <div className="flex gap-4 flex-wrap justify-center items-center">
               {["Days", "Hours", "Minutes", "Seconds"].map((label, index) => (
-                <div key={index} className="border border-gray-400 flex flex-col items-center px-8 py-5 shadow-xl hover:shadow-2xl rounded-md">
+                <div
+                  key={index}
+                  className="border border-gray-400 flex flex-col items-center px-8 py-5 shadow-xl hover:shadow-2xl rounded-md"
+                >
                   <span className="font-bold text-xl sm:text-2xl text-gray-800">
                     30
                   </span>
