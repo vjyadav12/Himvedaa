@@ -495,7 +495,7 @@ const Home = () => {
         {/* Card 1 */}
         <div
           className="cursor-pointer flex flex-col justify-center items-center gap-2 box-border 
-      shadow-2xl hover:shadow-green-700 border border-transparent 
+      shadow-sm hover:shadow-green-400 border border-transparent 
       hover:border-gray-500 bg-gradient-to-br from-white to-green-100 
       rounded-2xl p-20 transition duration-300 transform "
         >
@@ -506,9 +506,9 @@ const Home = () => {
         {/* Card 2 */}
         <div
           className="cursor-pointer flex flex-col justify-center items-center gap-2 box-border 
-      shadow-2xl hover:shadow-green-700 border border-transparent 
+      shadow-sm hover:shadow-green-400 border border-transparent 
       hover:border-gray-500 bg-gradient-to-br from-white to-green-100 
-      rounded-2xl p-6 transition duration-300 transform hover:scale-105"
+      rounded-2xl p-20 transition duration-300 transform "
         >
           <FaFileArrowUp className="text-4xl text-blue-700" />
           <p>Hand Packed</p>
@@ -517,50 +517,92 @@ const Home = () => {
         {/* Card 3 */}
         <div
           className="cursor-pointer flex flex-col justify-center items-center gap-2 box-border 
-      shadow-2xl hover:shadow-green-700 border border-transparent 
+      shadow-sm hover:shadow-green-400 border border-transparent 
       hover:border-gray-500 bg-gradient-to-br from-white to-green-100 
-      rounded-2xl p-6 transition duration-300 transform hover:scale-105"
+      rounded-2xl pt-20 pb-20 pl-12 pr-16 transition duration-300 transform "
+        >
+          <MdSecurity className="text-4xl text-red-600" />
+          <p className="text-lg font-semibold text-gray-700">Secured Payment</p>
+        </div>
+
+        {/*  */}
+        {/* <div
+          className="cursor-pointer flex flex-col justify-center items-center gap-2 box-border 
+      shadow-xl hover:shadow-green-500 border border-transparent 
+      hover:border-gray-500 bg-gradient-to-br from-white to-green-100 
+      rounded-2xl  transition duration-300 transform "
         >
           <MdSecurity className="text-4xl text-red-600" />
           <p>Secured Payment</p>
-        </div>
+        </div> */}
 
         {/* Card 4 */}
+
         <div
           className="cursor-pointer flex flex-col justify-center items-center gap-2 box-border 
-      shadow-2xl hover:shadow-green-700 border border-transparent 
+      shadow-sm hover:shadow-green-400 border border-transparent 
       hover:border-gray-500 bg-gradient-to-br from-white to-green-100 
-      rounded-2xl p-6 transition duration-300 transform hover:scale-105"
+      rounded-2xl pt-20 pb-20 pl-12 pr-12 transition duration-300 transform "
+        >
+          <FaCheckCircle className="text-4xl text-green-400" />
+
+          <p className="text-lg font-semibold text-gray-700">
+            Quality Guarantee
+          </p>
+        </div>
+
+        {/*  */}
+        {/* <div
+          className="cursor-pointer flex flex-col justify-center items-center gap-2 box-border 
+      shadow-xl hover:shadow-green-500 border border-transparent 
+      hover:border-gray-500 bg-gradient-to-br from-white to-green-100 
+      rounded-2xl  transition duration-300 transform "
         >
           <FaCheckCircle className="text-4xl text-green-400" />
           <p>Quality Guarantee</p>
-        </div>
+        </div> */}
 
         {/* Card 5 */}
+
         <div
           className="cursor-pointer flex flex-col justify-center items-center gap-2 box-border 
-      shadow-2xl hover:shadow-green-700 border border-transparent 
+      shadow-sm hover:shadow-green-400 border border-transparent 
       hover:border-gray-500 bg-gradient-to-br from-white to-green-100 
-      rounded-2xl p-6 transition duration-300 transform hover:scale-105"
+      rounded-2xl pt-20 pb-20 pl-12 pr-12 transition duration-300 transform "
+        >
+          <RiCustomerServiceFill className="text-4xl text-blue-700" />
+
+          <p className="text-lg font-semibold text-gray-700">
+            Customer Services
+          </p>
+        </div>
+
+        {/*  */}
+        {/* <div
+          className="cursor-pointer flex flex-col justify-center items-center gap-2 box-border 
+      shadow-xl hover:shadow-green-500 border border-transparent 
+      hover:border-gray-500 bg-gradient-to-br from-white to-green-100 
+      rounded-2xl transition duration-300 transform "
         >
           <RiCustomerServiceFill className="text-4xl text-blue-700" />
           <p>Customer Services</p>
-        </div>
+        </div> */}
       </div>
 
       {/* Map section */}
       {/* <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13518.853007815713!2d76.2629000320481!3d32.104034709840576!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391b4f902117bb1f%3A0xf28a1e3b1ff9e8f9!2sKangra%20Bus%20Stand!5e0!3m2!1sen!2sin!4v1727256970607!5m2!1sen!2sin" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> */}
-      <div className="p-[60px]" style={{backgroundColor:"#E6E4E1"}}>
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13518.853007815713!2d76.2629000320481!3d32.104034709840576!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391b4f902117bb1f%3A0xf28a1e3b1ff9e8f9!2sKangra%20Bus%20Stand!5e0!3m2!1sen!2sin!4v1727256970607!5m2!1sen!2sin"
-          width="100%"
-          height="400"
-          style={{ border: 0 }}
-          allowFullScreen=""
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-          title="Google Maps"
-        ></iframe>
+      <div className="w-full px-4 md:px-10 lg:px-20 py-10 bg-[#E6E4E1]">
+        <div className="w-full h-64 sm:h-80 md:h-[400px] lg:h-[500px]">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13518.853007815713!2d76.2629000320481!3d32.104034709840576!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391b4f902117bb1f%3A0xf28a1e3b1ff9e8f9!2sKangra%20Bus%20Stand!5e0!3m2!1sen!2sin!4v1727256970607!5m2!1sen!2sin"
+            className="w-full h-full rounded shadow-lg"
+            style={{ border: 0 }}
+            allowFullScreen=""
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            title="Google Maps"
+          ></iframe>
+        </div>
       </div>
 
       {/* end Map section */}
