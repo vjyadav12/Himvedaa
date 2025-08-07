@@ -3,6 +3,7 @@ import img from "../../assets/ChatGPT Image Jul 18, 2025, 12_21_52 PM.png";
 import Logo from "../../assets/final logo.png";
 import { FcGoogle } from "react-icons/fc";
 import { useState } from "react";
+import axios from "axios";
 
 const Login = () => {
   const [email, setEmail] = useState("");
