@@ -6,7 +6,7 @@ import { FcGoogle } from "react-icons/fc";
 const Forgot_Password = () => {
   return (
     <>
-      <div className="h-[100vh] bg-white w-[100vw] flex justify-evenly items-start border-5">
+      <div className="h-[100vh] bg-white w-[100vw] flex justify-evenly items-start ">
         {/* Left hand side  */}
         <div className="w-[50vw] h-[100vh] flex flex-col justify-center items-start pl-[160px] gap-7 mt-[-34px] ">
           {/* logo */}

@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom"
+import { Route, Routes, useLocation } from "react-router-dom"
 import Login from "./Components/Pages/Login"
 import Register from "./Components/Pages/Register"
 import Forgot_Password from "./Components/Pages/Forgot_Password"
@@ -11,23 +11,28 @@ import ProductPage from "./Components/Pages/CardDetails"
 import Footer2 from "./Components/Sections/Footer2"
 
 function App() {
+  const location = useLocation();
+
+  // Define routes where Header should be hidden
+  const hideHeaderRoutes = ["/login", "/register","/forgotPassword"];
+
   return (
     <>
-    <Header/>
-    {/* <Header2/> */}
-    <Routes>
-      <Route path="/" element={<Home/>}/>
-      <Route path="/shop" element={<Shop/>}/>
-      <Route path="/login" element={<Login/>}/>
-      <Route path="/register" element={<Register/>}/>
-      <Route path="/ingredient" element={<ProductPage/>}/>
+      {/* Show Header only if current path is NOT in hideHeaderRoutes */}
+      {!hideHeaderRoutes.includes(location.pathname) && <Header />}
 
-      <Route path="/forgotPassword" element={<Forgot_Password/>}/>
-    </Routes>
-    {/* <Footer/> */}
-    <Footer2/>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/shop" element={<Shop />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/ingredient" element={<ProductPage />} />
+        <Route path="/forgotPassword" element={<Forgot_Password />} />
+      </Routes>
+
+      <Footer2 />
     </>
-  )
+  );
 }
 
 export default App
