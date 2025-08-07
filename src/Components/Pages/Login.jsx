@@ -2,8 +2,24 @@ import { Link } from "react-router-dom";
 import img from "../../assets/ChatGPT Image Jul 18, 2025, 12_21_52 PM.png";
 import Logo from "../../assets/final logo.png";
 import { FcGoogle } from "react-icons/fc";
+import { useState } from "react";
+import axios from "axios";
 
 const Login = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword]= useState("")
+  const [data,setData] = useState([])
+
+  const Apicalling = async(e)=>{
+    e.preventDefault();
+    
+    const result = await axios.post("https://himveda-be.vercel.app/login") 
+    setData(result)
+    console.log("Frontend Api call Data", result)
+
+
+  }
+
   return (
     <>
       <div className="h-[100vh] w-full flex flex-col sm:flex-row bg-white">
@@ -25,11 +41,13 @@ const Login = () => {
               type="text"
               placeholder="Enter Your Email here"
               className="border border-gray-300 text-gray-600 rounded-xl p-2"
+              onChange={(e)=>{setEmail(e.target.value)}}
             />
             <input
               type="password"
               placeholder="Enter your password"
               className="border border-gray-300 text-gray-600 rounded-xl p-2"
+              onChange={(e)=>{setPassword(e.target.value)}}
             />
 
             <div className="flex justify-between items-center px-1 text-sm">
@@ -42,7 +60,7 @@ const Login = () => {
               </Link>
             </div>
 
-            <button className="p-2 w-full bg-green-600 text-white font-bold rounded-xl">
+            <button className="p-2 w-full bg-green-600 text-white font-bold rounded-xl" onClick={(e)=>{Apicalling(e)}}>
               Sign In
             </button>
 
