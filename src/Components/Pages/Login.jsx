@@ -14,7 +14,7 @@ const Login = () => {
     e.preventDefault();
 
     try {
-      const result = await axios.post("https://himveda-be.vercel.app/login", {
+      const result = await axios.post("https://himveda-be-38v4.vercel.app/login", {
         email,
         password,
       });
