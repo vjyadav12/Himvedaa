@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, Links } from "react-router-dom";
 import { useState } from "react";
 import logo from "../../assets/final logo.png";
 import { FaShoppingBag, FaUserAlt } from "react-icons/fa";
@@ -47,7 +47,8 @@ const Header = () => {
             </div>
             <div className="flex items-center gap-2">
               <FaUserAlt className="text-2xl text-red-950 hover:text-green-700" />
-              <p className="hover:underline hover:text-green-700 cursor-pointer">Login</p>
+              {/* <Link className="hover:underline hover:text-green-700 cursor-pointer">Login</Link> */}
+              <Link className="hover:underline hover:text-green-700 cursor-pointer" to="/login">Login</Link>
             </div>
 
             {/* Hamburger menu (mobile only) */}
