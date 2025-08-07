@@ -7,18 +7,27 @@ import axios from "axios";
 
 const Login = () => {
   const [email, setEmail] = useState("");
-  const [password, setPassword]= useState("")
-  const [data,setData] = useState([])
+  const [password, setPassword] = useState("");
+  const [data, setData] = useState([]);
 
-  const Apicalling = async(e)=>{
+  const Apicalling = async (e) => {
     e.preventDefault();
-    
-    const result = await axios.post("https://himveda-be.vercel.app/login") 
-    setData(result)
-    console.log("Frontend Api call Data", result)
 
+    try {
+      const result = await axios.post("https://himveda-be.vercel.app/login", {
+        email,
+        password,
+      });
 
-  }
+      setData(result); // store only the response data
+      console.log("Frontend Api call Data", result);
+    } catch (error) {
+      console.error("Login error:", error.response?.data || error.message);
+      alert(
+        "Login failed: " + (error.response?.data?.message || "Unknown error")
+      );
+    }
+  };
 
   return (
     <>
@@ -32,7 +41,9 @@ const Login = () => {
           <div className="flex flex-col gap-1">
             <h3 className="font-bold text-2xl">Hello,</h3>
             <h1 className="font-bold text-4xl">Welcome Back</h1>
-            <p className="text-gray-500">Hey welcome back to your special place</p>
+            <p className="text-gray-500">
+              Hey welcome back to your special place
+            </p>
           </div>
 
           {/* Inputs */}
@@ -41,13 +52,17 @@ const Login = () => {
               type="text"
               placeholder="Enter Your Email here"
               className="border border-gray-300 text-gray-600 rounded-xl p-2"
-              onChange={(e)=>{setEmail(e.target.value)}}
+              onChange={(e) => {
+                setEmail(e.target.value);
+              }}
             />
             <input
               type="password"
               placeholder="Enter your password"
               className="border border-gray-300 text-gray-600 rounded-xl p-2"
-              onChange={(e)=>{setPassword(e.target.value)}}
+              onChange={(e) => {
+                setPassword(e.target.value);
+              }}
             />
 
             <div className="flex justify-between items-center px-1 text-sm">
@@ -55,12 +70,20 @@ const Login = () => {
                 <input type="checkbox" />
                 Remember
               </label>
-              <Link to="/forgotPassword" className="text-green-600 hover:underline">
+              <Link
+                to="/forgotPassword"
+                className="text-green-600 hover:underline"
+              >
                 Forgot Password?
               </Link>
             </div>
 
-            <button className="p-2 w-full bg-green-600 text-white font-bold rounded-xl" onClick={(e)=>{Apicalling(e)}}>
+            <button
+              className="p-2 w-full bg-green-600 text-white font-bold rounded-xl"
+              onClick={(e) => {
+                Apicalling(e);
+              }}
+            >
               Sign In
             </button>
 
