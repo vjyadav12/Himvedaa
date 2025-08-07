@@ -8,11 +8,15 @@ import axios from "axios";
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword]= useState("")
+  const [data,setData] = useState([])
 
   const Apicalling = async(e)=>{
     e.preventDefault();
     
     const result = await axios.post("https://himveda-be.vercel.app/login")
+    setData(result)
+    console.log("Frontend Api call Data", result)
+
 
   }
 

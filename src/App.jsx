@@ -29,7 +29,6 @@ function App() {
         <Route path="/ingredient" element={<ProductPage />} />
         <Route path="/forgotPassword" element={<Forgot_Password />} />
       </Routes>
-
       <Footer2 />
     </>
   );
