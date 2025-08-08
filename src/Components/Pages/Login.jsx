@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import img from "../../assets/ChatGPT Image Jul 18, 2025, 12_21_52 PM.png";
 import Logo from "../../assets/final logo.png";
 import { FcGoogle } from "react-icons/fc";
@@ -9,18 +9,22 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [data, setData] = useState([]);
+  const navigate = useNavigate();
 
   const Apicalling = async (e) => {
     e.preventDefault();
 
     try {
-      const result = await axios.post("https://himveda-be-38v4.vercel.app/login", {
+      const result = await axios.post("http://localhost:7676/login", {
         email,
         password,
       });
 
-      setData(result); // store only the response data
-      console.log("Frontend Api call Data", result);
+      setData(result?.data); // store only the response data
+      console.log("Frontend Api call Data", result?.data?.user);
+      if(data?.success === true ){
+        navigate("/home")
+      }
     } catch (error) {
       console.error("Login error:", error.response?.data || error.message);
       alert(

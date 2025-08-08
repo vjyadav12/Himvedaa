@@ -29,6 +29,7 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/ingredient" element={<ProductPage />} />
         <Route path="/forgotPassword" element={<Forgot_Password />} />
+        <Route path="*" element={<Home />} />
       </Routes>
 
       <Footer2 />

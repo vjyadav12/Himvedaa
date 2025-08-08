@@ -1,9 +1,43 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import img from "../../assets/ChatGPT Image Jul 18, 2025, 12_21_52 PM.png";
 import Logo from "../../assets/final logo.png";
 import { FcGoogle } from "react-icons/fc";
+import { useState } from "react";
+import axios from "axios";
 
 const Register = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const [data, setData] = useState([]);
+  const navigate = useNavigate()
+  const Apicalling = async (e) => {
+    e.preventDefault();
+    try {
+      const result = await axios.post("http://localhost:7676/register", {
+        name,
+        email,
+        password,
+        phoneNumber,
+      });
+      setData(result); // store only the response data
+      console.log("here is your result sir:", result);
+      if (result?.data?.success) {
+        alert("User Registration Successfully")
+        navigate("/");
+      }
+    } catch (error) {
+      console.error("Login error:", error.response?.data || error.message);
+      alert(
+        // "Login failed: " + (error.response?.data?.message || "Unknown error")
+        "Login failed: " + (error.result?.data?.message || "Unknown error")
+
+        
+      );
+    }
+  };
+
   return (
     <>
       <div className="h-[100vh] bg-white w-[100vw] flex flex-col md:flex-row justify-evenly items-start ">
@@ -25,24 +59,36 @@ const Register = () => {
             <div className="flex flex-col md:flex-row gap-2">
               <input
                 type="text"
-                placeholder="First Name"
+                placeholder="Full Name"
                 className="border-1 text-gray-500 rounded-xl p-2 flex-1"
-              />
-              <input
-                type="text"
-                placeholder="Last Name"
-                className="border-1 text-gray-500 rounded-xl p-2 flex-1"
+                onChange={(e) => {
+                  setName(e.target.value);
+                }}
               />
             </div>
             <input
               type="email"
               placeholder="Email"
               className="border-1 text-gray-500 rounded-xl p-2"
+              onChange={(e) => {
+                setEmail(e.target.value);
+              }}
             />
             <input
               type="password"
               placeholder="Strong Password"
               className="border-1 text-gray-500 rounded-xl p-2"
+              onChange={(e) => {
+                setPassword(e.target.value);
+              }}
+            />
+            <input
+              type="number"
+              placeholder="Phone Number"
+              className="border-1 text-gray-500 rounded-xl p-2"
+              onChange={(e) => {
+                setPhoneNumber(e.target.value);
+              }}
             />
 
             {/* Remember me */}
@@ -53,7 +99,12 @@ const Register = () => {
               </div>
             </div>
 
-            <button className="p-2 w-full bg-green-600 text-white font-bold rounded-2xl">
+            <button
+              className="p-2 w-full bg-green-600 text-white font-bold rounded-2xl"
+              onClick={(e) => {
+                Apicalling(e);
+              }}
+            >
               Sign up
             </button>
 
