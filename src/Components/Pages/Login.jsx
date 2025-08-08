@@ -16,7 +16,7 @@ const Login = () => {
 
     try {
       // const result = await axios.post("http://localhost:7676/login", {
-      const result = await axios.post("https://himveda-be.vercel.app/login", {
+      const result = await axios.post("https://himveda-be-38v4.vercel.app/login", {
         email,
         password,
       });
