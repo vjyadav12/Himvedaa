@@ -32,7 +32,7 @@ const Register = () => {
       console.error("Login error:", error.response?.data || error.message);
       alert(
         // "Login failed: " + (error.response?.data?.message || "Unknown error")
-        "Login failed: " + (error.result?.data?.message || "Unknown error")
+        "Login failed: " + (error.response?.data?.message || "Unknown error")
 
         
       );
