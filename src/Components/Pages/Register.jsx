@@ -15,7 +15,8 @@ const Register = () => {
   const Apicalling = async (e) => {
     e.preventDefault();
     try {
-      const result = await axios.post("http://localhost:7676/register", {
+      // const result = await axios.post("http://localhost:7676/register", {
+      const result = await axios.post("https://himveda-be.vercel.app/register", {
         name,
         email,
         password,

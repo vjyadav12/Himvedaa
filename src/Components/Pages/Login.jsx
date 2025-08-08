@@ -15,6 +15,7 @@ const Login = () => {
     e.preventDefault();
 
     try {
+      // const result = await axios.post("http://localhost:7676/login", {
       const result = await axios.post("https://himveda-be.vercel.app/login", {
         email,
         password,
@@ -23,7 +24,7 @@ const Login = () => {
       setData(result?.data); // store only the response data
       console.log("Frontend Api call Data", result?.data?.user);
       if(data?.success === true ){
-        navigate("/home")
+        navigate("/")
       }
     } catch (error) {
       console.error("Login error:", error.response?.data || error.message);
