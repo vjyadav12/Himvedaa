@@ -11,15 +11,15 @@ import ProductPage from "./Components/Pages/CardDetails"
 import Footer2 from "./Components/Sections/Footer2"
 
 function App() {
-  // const location = useLocation();
+  const location = useLocation();
 
   // Define routes where Header should be hidden
-  // const hideHeaderRoutes = ["/login", "/register","/forgotPassword"];
+  const hideHeaderRoutes = ["/login", "/register","/forgotPassword"];
 
   return (
     <>
       {/* Show Header only if current path is NOT in hideHeaderRoutes */}
-      {/* {!hideHeaderRoutes.includes(location.pathname) && <Header />} */}
+      {!hideHeaderRoutes.includes(location.pathname) && <Header />}
 
       <Header/>
       <Routes>
