@@ -21,7 +21,7 @@ function App() {
       {/* Show Header only if current path is NOT in hideHeaderRoutes */}
       {!hideHeaderRoutes.includes(location.pathname) && <Header />}
 
-      <Header/>
+      {/* <Header/> */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/shop" element={<Shop />} />
