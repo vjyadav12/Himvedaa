@@ -16,7 +16,7 @@ const Register = () => {
     e.preventDefault();
     try {
       // const result = await axios.post("http://localhost:7676/register", {
-      const result = await axios.post("https://himveda-be.vercel.app/register", {
+      const result = await axios.post("https://himveda-be-38v4.vercel.app/register", {
         name,
         email,
         password,
